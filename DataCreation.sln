@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataCreation", "DataCreation\DataCreation.csproj", "{BBCCDEB4-9B3A-41C0-98D4-3DCE33DAE8D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSorting", "DataSorting\DataSorting.csproj", "{A83257A0-2034-4A37-BFD4-309AC59536DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBCCDEB4-9B3A-41C0-98D4-3DCE33DAE8D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBCCDEB4-9B3A-41C0-98D4-3DCE33DAE8D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBCCDEB4-9B3A-41C0-98D4-3DCE33DAE8D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBCCDEB4-9B3A-41C0-98D4-3DCE33DAE8D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A83257A0-2034-4A37-BFD4-309AC59536DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A83257A0-2034-4A37-BFD4-309AC59536DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A83257A0-2034-4A37-BFD4-309AC59536DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A83257A0-2034-4A37-BFD4-309AC59536DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {60C2A22D-0F94-4D0A-AC61-37797F1D5E63}
+	EndGlobalSection
+EndGlobal
