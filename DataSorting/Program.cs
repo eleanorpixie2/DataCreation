@@ -34,6 +34,13 @@ namespace DataSorting
             }
 
             //printing out sorted int
+
+            temp = QuickSortInt(data, 0, data.Count - 1);
+            for (int i = 0; i < 100; i++)
+            {
+                Console.WriteLine(temp[i]);
+            }
+
             Console.ReadLine();
         }
 

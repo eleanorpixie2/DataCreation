@@ -10,6 +10,7 @@ namespace DataCreation
 
             WriteData();
 
+            Console.WriteLine("Done");
             Console.ReadLine();
         }
 
