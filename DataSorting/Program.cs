@@ -92,15 +92,15 @@ namespace DataSorting
             int i = leftMost;
             int j = rightMost;
 
-            int pivotIndex = (leftMost + rightMost) / 2;
+            double pivotIndex = unsorted[(leftMost + rightMost) / 2].Item3;
 
             while (i <= j)
             {
-                while ((unsorted[i].Item3).CompareTo(unsorted[pivotIndex].Item3) < 0)
+                while ((unsorted[i].Item3).CompareTo(unsorted[(leftMost + rightMost) / 2].Item3) < 0)
                 {
                     i++;
                 }
-                while ((unsorted[j].Item3).CompareTo(unsorted[pivotIndex].Item3) > 0)
+                while ((unsorted[j].Item3).CompareTo(unsorted[(leftMost + rightMost) / 2].Item3) > 0)
                 {
                     j--;
                 }

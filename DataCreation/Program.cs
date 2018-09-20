@@ -23,7 +23,7 @@ namespace DataCreation
             Random random = new Random();
 
 
-            for (int i = 0; i < 1000000; i++)
+            for (int i = 0; i < 1000; i++)
             {
                 //GUID
                 Guid g = Guid.NewGuid();
