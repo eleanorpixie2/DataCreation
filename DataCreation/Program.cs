@@ -20,20 +20,20 @@ namespace DataCreation
             {
 
 
-            Random random = new Random();
+                Random random = new Random();
 
 
-            for (int i = 0; i < 1000; i++)
-            {
-                //GUID
-                Guid g = Guid.NewGuid();
+                for (int i = 0; i < 1000; i++)
+                {
+                    //GUID
+                    Guid g = Guid.NewGuid();
 
-                //Double
-                double d = random.NextDouble();
-                
-                file.WriteLine(String.Format("{0}, {1}, {2}", i, g, d));
+                    //Double
+                    double d = random.NextDouble();
 
-            }
+                    file.WriteLine(String.Format("{0}, {1}, {2}", i, g, d));
+
+                }
             }
 
         }
