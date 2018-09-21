@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-//https://www.w3resource.com/csharp-exercises/searching-and-sorting-algorithm/searching-and-sorting-algorithm-exercise-9.php
 
 namespace DataSorting
 {
@@ -65,7 +64,7 @@ namespace DataSorting
             switch(selection)
             {
                 case 1:
-                    temp = QuickSort.QuickSortInt(data,0,data.Count-1);
+                    temp = QuickSort.QuickSortInt(data, 0, data.Count - 1);
                     break;
                 case 2:
                     temp = QuickSort.QuickSortGuid(data, 0, data.Count - 1);

@@ -6,6 +6,8 @@ namespace DataSorting
 {
     class QuickSort
     {
+        //Resource used https://www.w3resource.com/csharp-exercises/searching-and-sorting-algorithm/searching-and-sorting-algorithm-exercise-9.php
+
         //sort list by the double datatype, return sorted tuple list
         public static List<Tuple<int, Guid, double>> QuickSortInt(List<Tuple<int, Guid, double>> unsorted, int leftMost, int rightMost)
         {
