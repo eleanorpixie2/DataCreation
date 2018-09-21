@@ -15,36 +15,40 @@ namespace DataSorting
             //read in the data
             string[] lines = File.ReadAllLines(@"C:\workspace\DataCreation.txt"); //https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/file-system/how-to-read-from-a-text-file
 
+            //store the 3 data types temporarily in a string array
             string[] temp1 = new string[3];
+            //seperating character
             char seperatingChar = ',';
             //parsing data
             for (int i = 0; i < lines.Length; i++)
             {
+                //add data to tuple list
                 temp1 = lines[i].Split(seperatingChar, StringSplitOptions.RemoveEmptyEntries);
                 data.Add(new Tuple<int, Guid, double>(Convert.ToInt32(temp1[0]),Guid.Parse(temp1[1]),Convert.ToDouble(temp1[2])));
 
             }
 
-
+            //create a temp list to hold data
            List<Tuple<int, Guid, double>> temp;
-           //temp = QuickSortDouble(data, 0, data.Count-1);
-           // for(int i = 0; i < 100; i++)
-           // {
-           //     Console.WriteLine(temp[i]);
-           // }
+            //call double sort and display data
+            temp = QuickSortDouble(data, 0, data.Count - 1);
+            for (int i = 0; i < 100; i++)
+            {
+                Console.WriteLine(temp[i]);
+            }
 
-           // Console.WriteLine("Double Sort Done");
-
-           // //printing out sorted int
-           // temp = QuickSortInt(data, 0, data.Count - 1);
-           // for (int i = 0; i < 100; i++)
-           // {
-           //     Console.WriteLine(temp[i]);
-           // }
-
-           // Console.WriteLine("Int Sort Done");
+            Console.WriteLine("Double Sort Done");
 
             //printing out sorted int
+            temp = QuickSortInt(data, 0, data.Count - 1);
+            for (int i = 0; i < 100; i++)
+            {
+                Console.WriteLine(temp[i]);
+            }
+
+            Console.WriteLine("Int Sort Done");
+
+            //printing out sorted guid
             temp = QuickSortGuid(data, 0, data.Count - 1);
             for (int i = 0; i < 100; i++)
             {
@@ -54,13 +58,17 @@ namespace DataSorting
             Console.ReadLine();
         }
 
+        //sort list by the double datatype, return sorted tuple list
         public static List<Tuple<int,Guid,double>> QuickSortInt(List<Tuple<int, Guid, double>> unsorted, int leftMost, int rightMost)
         {
+            //indexs
             int i = leftMost;
             int j = rightMost;
 
+            //pivot point
             int pivotIndex = unsorted[(leftMost + rightMost) / 2].Item1;
 
+            //compare and sort list elements
             while ( i <= j)
             {
                 while ((unsorted[i].Item1).CompareTo(pivotIndex) < 0)
@@ -94,16 +102,21 @@ namespace DataSorting
                 QuickSortInt(unsorted, i, rightMost);
             }
 
+            //return sorted list
             return unsorted;
         }
 
+        //sort list by the int datatype, return sorted tuple list
         public static List<Tuple<int, Guid, double>> QuickSortDouble(List<Tuple<int, Guid, double>> unsorted, int leftMost, int rightMost)
         {
+            //indexs
             int i = leftMost;
             int j = rightMost;
 
+            //pivot point to sort around
             double pivotIndex = unsorted[(leftMost + rightMost) / 2].Item3;
 
+            //compare and sort list elements
             while (i <= j)
             {
                 while ((unsorted[i].Item3).CompareTo(pivotIndex) < 0)
@@ -137,16 +150,21 @@ namespace DataSorting
                 QuickSortDouble(unsorted, i, rightMost);
             }
 
+            //return sorted list
             return unsorted;
         }
 
+        //sort list by the guid datatype, return sorted tuple list
         public static List<Tuple<int, Guid, double>> QuickSortGuid(List<Tuple<int, Guid, double>> unsorted, int leftMost, int rightMost)
         {
+            //indexes
             int i = leftMost;
             int j = rightMost;
 
+            //pivot point to compare around
             Guid pivotIndex = unsorted[(leftMost + rightMost) / 2].Item2;
 
+            //compare and sort list elements
             while (i <= j)
             {
                 while ((unsorted[i].Item2).CompareTo(pivotIndex) < 0)
@@ -180,6 +198,7 @@ namespace DataSorting
                 QuickSortGuid(unsorted, i, rightMost);
             }
 
+            //return sorted list.
             return unsorted;
         }
     }
