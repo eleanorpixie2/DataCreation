@@ -13,7 +13,7 @@ namespace DataSorting
             List<Tuple<int, Guid, double>> data = new List<Tuple<int, Guid, double>>();
 
             //read in the data
-            string[] lines = File.ReadAllLines(@"C:\Users\Adan\Desktop\DataCreation.txt"); //https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/file-system/how-to-read-from-a-text-file
+            string[] lines = File.ReadAllLines(@"C:\workspace\DataCreation.txt"); //https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/file-system/how-to-read-from-a-text-file
 
             string[] temp1 = new string[3];
             char seperatingChar = ',';
@@ -27,22 +27,22 @@ namespace DataSorting
 
 
            List<Tuple<int, Guid, double>> temp;
-           temp = QuickSortDouble(data, 0, data.Count-1);
-            for(int i = 0; i < 100; i++)
-            {
-                Console.WriteLine(temp[i]);
-            }
+           //temp = QuickSortDouble(data, 0, data.Count-1);
+           // for(int i = 0; i < 100; i++)
+           // {
+           //     Console.WriteLine(temp[i]);
+           // }
 
-            Console.WriteLine("Double Sort Done");
+           // Console.WriteLine("Double Sort Done");
 
-            //printing out sorted int
-            temp = QuickSortInt(data, 0, data.Count - 1);
-            for (int i = 0; i < 100; i++)
-            {
-                Console.WriteLine(temp[i]);
-            }
+           // //printing out sorted int
+           // temp = QuickSortInt(data, 0, data.Count - 1);
+           // for (int i = 0; i < 100; i++)
+           // {
+           //     Console.WriteLine(temp[i]);
+           // }
 
-            Console.WriteLine("Int Sort Done");
+           // Console.WriteLine("Int Sort Done");
 
             //printing out sorted int
             temp = QuickSortGuid(data, 0, data.Count - 1);
@@ -172,12 +172,12 @@ namespace DataSorting
             // Recursive calls
             if (leftMost < j)
             {
-                QuickSortDouble(unsorted, leftMost, j);
+                QuickSortGuid(unsorted, leftMost, j);
             }
 
             if (i < rightMost)
             {
-                QuickSortDouble(unsorted, i, rightMost);
+                QuickSortGuid(unsorted, i, rightMost);
             }
 
             return unsorted;
