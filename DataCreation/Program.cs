@@ -16,14 +16,14 @@ namespace DataCreation
 
         public static void WriteData()
         {
-            using (StreamWriter file = new StreamWriter(@"C:\workspace\DataCreation.txt", true))
+            using (StreamWriter file = new StreamWriter(@"C:\workspace\DataCreation.csv", true))
             {
 
 
                 Random random = new Random();
 
 
-                for (int i = 0; i < 1000; i++)
+                for (int i = 0; i < 1000000; i++)
                 {
                     //GUID
                     Guid g = Guid.NewGuid();
